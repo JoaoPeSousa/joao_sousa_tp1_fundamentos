@@ -8,11 +8,11 @@ public class AlunoMenu {
         String[] nomes = new String[100];
         float[] notasAV1 = new float[100];
         float[] notasAV2 = new float[100];
-        int n = 0;
+        int opcao = 0;
         int i = 0;
         String holder;
         try (Scanner sc = new Scanner(System.in)) {
-            while (n != 4) {
+            while (opcao != 4) {
                 System.out.println("\n-_-_-_-_-_-_-_-_-_-_-_-_\nSistema de notas do aluno\n-_-_-_-_-_-_-_-_-_-_-_-_\nOpçoes:\n");
                 System.out.println("""
                         [1] Registrar as notas de um novo aluno.
@@ -23,11 +23,11 @@ public class AlunoMenu {
 
                 try {
                     holder = sc.nextLine();
-                    n = Integer.parseInt(holder);
+                    opcao = Integer.parseInt(holder);
                 } catch (Exception e) {
                     System.out.println(e.getMessage());
                 }
-                switch (n) {
+                switch (opcao) {
                     case 1:
                         if (i >= 100) {
                             System.out.println("O limite máximo de alunos para registro foi alcançado.\t");
@@ -94,7 +94,7 @@ public class AlunoMenu {
                                 } else if (media < 7) {
                                     resultadoFinal = "Prova Final";
                                 } else {
-                                    resultadoFinal = "Aprovado!";
+                                    resultadoFinal = "Aprovado(a)!";
                                 }
                                 System.out.printf("""
                                                 Nome do aluno: %s
