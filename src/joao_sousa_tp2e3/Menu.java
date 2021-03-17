@@ -71,8 +71,9 @@ public class Menu {
         if(name.equals("")){
             throw new SystemException("nomeInvalido");
         }
-        System.out.println("Se você desejar dar as notas, digite agora, se não, apenas aperte enter duas vezes");
+        System.out.println("Primeira nota do aluno(a):");
         String firstGrade = sc.nextLine();
+        System.out.println("Segunda nota do aluno(a):");
         String secondGrade = sc.nextLine();
 
         if(firstGrade.equals("") || secondGrade.equals("")){
